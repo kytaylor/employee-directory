@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 import CardDeck from "react-bootstrap/CardDeck";
 
-const Employees = ({ searchTerm }) => {
+const Employees = ({ sortAlpha, sortGender }) => {
     const [employees, setEmployees] = useState ([]);
 
     useEffect (() => {

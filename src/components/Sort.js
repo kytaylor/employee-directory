@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { Form, ToggleButton, ToggleButtonGroup } from "react-bootstrap"
+import { ToggleButton, ToggleButtonGroup } from "react-bootstrap"
 
-const SortAlpha = ({ searchTerm, setSearchTerm }) => {
-    const [value, setValue] = useState();
+const SortAlpha = () => {
+    const [sortAlpha, setSortAlpha] = useState();
 
-    const handleChange = (val) => setValue(val);
+    const handleChange = (val) => setSortAlpha(val);
   
     return (
         <>
             <h3>Sort alphabetically by:</h3>
 
-            <ToggleButtonGroup type="radio" name="sortAlpha" value={value} onChange={handleChange} defaultValue={["none"]}>
+            <ToggleButtonGroup type="radio" name="sortAlpha" value={sortAlpha} onChange={handleChange} defaultValue={["none"]}>
                 <ToggleButton value={"none"}>None</ToggleButton>
                 <ToggleButton value={"first"}>First Name</ToggleButton>
                 <ToggleButton value={"last"}>Last Name</ToggleButton>
